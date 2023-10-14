@@ -12,9 +12,6 @@ const themeOverride: ThemeOverride = {
         padding: 0,
         margin: 0,
       },
-      "*::selection, *::-moz-selection": {
-        background: "yellow"
-      }
     },
   },
 };

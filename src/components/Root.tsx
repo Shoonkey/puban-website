@@ -16,6 +16,8 @@ import useAppSettings from "../hooks/useAppSettings";
 import Homepage from "../pages/Homepage";
 import SetupBotPage from "../pages/SetupBotPage";
 
+import "@fontsource/gabarito";
+
 function Root() {
   const { t, i18n } = useTranslation();
   const { isSubapp, theme, setTheme } = useAppSettings();
@@ -30,7 +32,7 @@ function Root() {
       bg={backgroundColor}
       flexDir="column"
       w={isSubapp ? "100%" : "100dvw"}
-      h={isSubapp ? "100%" : "100dvh"}
+      minH={isSubapp ? "100%" : "100dvh"}
     >
       <Flex alignItems="center" p={2}>
         {location.pathname !== "/" && (
@@ -83,7 +85,7 @@ function Root() {
           </Box>
         )}
       </Flex>
-      <Flex flexDir="column" flexGrow={1} minWidth="300px" w="80%" mx="auto" px={4}>
+      <Flex flexDir="column" flexGrow={1} minWidth="300px" w="80%" mx="auto" px={4} pb={8}>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/bot" element={<SetupBotPage />} />
