@@ -1,0 +1,11 @@
+{
+  "appTitle": "Puban, a made-up cipher",
+  "pages": {
+    "home": {
+      "meta": {
+        "title": "Homepage",
+        "description": "Puban is a made-up cipher that uses Ubbi Dubbi and PigLatin to encrypt messages"
+      }
+    }
+  }
+}

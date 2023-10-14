@@ -1,0 +1,11 @@
+{
+  "appTitle": "Puban, una cifra inventada",
+  "pages": {
+    "home": {
+      "meta": {
+        "title": "Página principal",
+        "description": "Puban es una cifra inventada que utiliza Ubbi Dubbi y PigLatin para encriptar mensajes"
+      }
+    }
+  }
+}
