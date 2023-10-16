@@ -6,6 +6,7 @@ import {
   Select,
   Tooltip,
   VisuallyHidden,
+  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
@@ -85,7 +86,27 @@ function Root() {
           </Box>
         )}
       </Flex>
-      <Flex flexDir="column" flexGrow={1} minWidth="300px" w="80%" mx="auto" px={0} pb={8}>
+      <Flex
+        flexDir="column"
+        flexGrow={1}
+        minWidth="300px"
+        w="80%"
+        mx="auto"
+        px={0}
+        pb={8}
+      >
+        {i18n.language !== "en-US" && (
+          <Text
+            mx="auto"
+            textAlign="center"
+            p={4}
+            borderRadius="8px"
+            bg="gray.700"
+            _light={{ bg: "gray.300" }}
+          >
+            {t("notAvailableYet")}
+          </Text>
+        )}
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/bot" element={<SetupBotPage />} />
