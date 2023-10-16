@@ -13,7 +13,7 @@ function TranslateArea({ mode, ...props }: TranslateAreaProps) {
   return (
     <Textarea
       height="200px"
-      fontSize="24px"
+      fontSize={{ base: "18px", md: "24px" }}
       borderColor={borderColor}
       _hover={{ borderColor: hoveredBorderColor }}
       isReadOnly={isReadOnly}

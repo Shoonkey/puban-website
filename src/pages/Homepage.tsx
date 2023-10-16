@@ -3,7 +3,6 @@ import {
   Flex,
   Button,
   Text,
-  Box,
   IconButton,
   Tooltip,
   useClipboard,
@@ -17,6 +16,7 @@ import TranslateArea from "../components/TranslateArea";
 import CustomSelect from "../components/CustomSelect";
 import { Link } from "react-router-dom";
 import { Check, ClipboardText } from "@phosphor-icons/react";
+import CustomLink from "../components/CustomLink";
 
 type Operation = "encrypt" | "decrypt";
 type Language = "puban" | "ubbi-dubbi" | "pig-latin";
@@ -46,14 +46,14 @@ function Homepage() {
   return (
     <Page metaTitle="home" fontFamily="Gabarito">
       <Flex flexDir="column" alignItems="center">
-        <FancyText as="h1" fontSize={{ base: "96px", md: "128px" }}>
+        <FancyText as="h1" mb={-6} fontSize={{ base: "96px", md: "128px" }}>
           Puban
         </FancyText>
         <Heading
           as="h2"
           fontFamily="inherit"
           textAlign="center"
-          lineHeight="48px"
+          lineHeight="36px"
           letterSpacing="1px"
         >
           A made-up cipher that uses{" "}
@@ -83,21 +83,19 @@ function Homepage() {
           textAlign="center"
           color="gray.500"
         >
-          You can also check out the also a{" "}
-          <Link to="/bot">
-            <Text
-              color="blue.300"
-              _hover={{ color: "purple.400" }}
-              as="span"
-              textDecoration="underline"
-            >
-              Discord bot
-            </Text>
-          </Link>
-          !
+          There's also a <CustomLink to="/bot">Discord bot</CustomLink> you can
+          set up!
         </Heading>
       </Flex>
-      <Flex as="form" flexDir="column" mt={12} gap={4} onSubmit={handleSubmit} w="80%" mx="auto">
+      <Flex
+        as="form"
+        flexDir="column"
+        mt={12}
+        gap={4}
+        onSubmit={handleSubmit}
+        w="80%"
+        mx="auto"
+      >
         <TranslateArea
           mode="input"
           placeholder="Text to be encrypted or decrypted goes here"

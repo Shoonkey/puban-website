@@ -6,6 +6,12 @@
         "title": "Homepage",
         "description": "Puban is a made-up cipher that uses Ubbi Dubbi and PigLatin to encrypt messages"
       }
+    },
+    "setup-bot": {
+      "meta": {
+        "title": "Setting up the bot",
+        "description": "Set up the Discord bot that encrypts and decrypts Puban"
+      }
     }
   }
 }

@@ -85,7 +85,7 @@ function Root() {
           </Box>
         )}
       </Flex>
-      <Flex flexDir="column" flexGrow={1} minWidth="300px" w="80%" mx="auto" px={4} pb={8}>
+      <Flex flexDir="column" flexGrow={1} minWidth="300px" w="80%" mx="auto" px={0} pb={8}>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/bot" element={<SetupBotPage />} />
