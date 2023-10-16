@@ -97,8 +97,9 @@ function Homepage() {
           !
         </Heading>
       </Flex>
-      <Flex as="form" flexDir="column" mt={12} gap={4} onSubmit={handleSubmit}>
+      <Flex as="form" flexDir="column" mt={12} gap={4} onSubmit={handleSubmit} w="80%" mx="auto">
         <TranslateArea
+          mode="input"
           placeholder="Text to be encrypted or decrypted goes here"
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
@@ -141,7 +142,7 @@ function Homepage() {
               zIndex={2}
               position="absolute"
               variant="ghost"
-              right="28px"
+              right="8px"
               top="8px"
               icon={
                 hasCopiedResult ? (
@@ -157,7 +158,7 @@ function Homepage() {
             />
           </Tooltip>
           <TranslateArea
-            isReadOnly
+            mode="output"
             placeholder="Resulting text will show here"
             value={resultText}
           />
