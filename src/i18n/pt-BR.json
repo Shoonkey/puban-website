@@ -7,6 +7,12 @@
         "title": "Página inicial",
         "description": "Puban é uma cifra de faz-de-conta que usa Ubbi Dubbi e PigLatin para encriptar mensagens"
       }
+    },
+    "setup-bot": {
+      "meta": {
+        "title": "Configurando o bot",
+        "description": "Configure o bot do Discord que encripta e decripta Puban"
+      }
     }
   }
 }

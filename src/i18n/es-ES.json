@@ -7,6 +7,12 @@
         "title": "Página principal",
         "description": "Puban es una cifra inventada que utiliza Ubbi Dubbi y PigLatin para encriptar mensajes"
       }
+    },
+    "setup-bot": {
+      "meta": {
+        "title": "Configurando el bot",
+        "description": "Configure el bot de Discord que encripta y decripta Puban"
+      }
     }
   }
 }
