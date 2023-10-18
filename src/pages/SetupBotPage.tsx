@@ -59,23 +59,21 @@ function SetupBotPage() {
           </Trans>
         </Text>
         <Heading as="h2" size="md">
-          {t("pages.setup-bot.instructions.needed.title")}
+          {t("pages.setup-bot.instructions.thingsNeeded.title")}
         </Heading>
         <UnorderedList>
           <ListItem>
-            A terminal where you can run commands (a Windows command prompt, or
-            an UNIX terminal).
+            {t("pages.setup-bot.instructions.thingsNeeded.items.terminal")}
           </ListItem>
           <ListItem>
-            NodeJS, to run the code.{" "}
-            <CustomLink to="https://nodejs.org">NodeJS</CustomLink> is a tool
-            that allows running JavaScript out of the browser.
+            <Trans i18nKey="pages.setup-bot.instructions.thingsNeeded.items.nodejs">
+              <CustomLink to="https://nodejs.org" />
+            </Trans>
           </ListItem>
           <ListItem>
-            Git, ideally, to easily download the code.{" "}
-            <CustomLink to="https://git-scm.com/">Git</CustomLink> is a version
-            management tool that also allows for downloading and updating code
-            efficiently.
+            <Trans i18nKey="pages.setup-bot.instructions.thingsNeeded.items.git">
+              <CustomLink to="https://git-scm.com/" />
+            </Trans>
           </ListItem>
         </UnorderedList>
         <Heading as="h2" size="md">
@@ -96,7 +94,7 @@ function SetupBotPage() {
           </Code>
           <Trans i18nKey="pages.setup-bot.instructions.gettingTheCode.withoutGit">
             <CustomLink to="https://github.com/shoonkey/puban-languages" />
-          </Trans>
+          </Trans>{" "}
           <Text as="i">
             <Trans i18nKey="pages.setup-bot.instructions.gettingTheCode.placeFiles">
               <Code display="inline-block" />
