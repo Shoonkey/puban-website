@@ -24,7 +24,7 @@
           "encrypt": "Encrypt to",
           "decrypt": "Decrypt from"
         },
-        "button": "Go"
+        "button": "Let's go!"
       }
     },
     "setup-bot": {
@@ -48,9 +48,9 @@
         "gettingTheCode": {
           "title": "Getting the code",
           "runGitCode": "With Git installed, you can get the code by running",
-          "withoutGit": "If you choose to not install Git, you can download the ZIP for the code in the repository website. As it uses a submodule from another repository, you'll also need to download the ZIP from the <0>language repository</0> and ",
+          "withoutGit": "If you choose to not install Git, you can download the ZIP for the code in the repository website. As it uses a submodule from another repository, you'll also need to download the ZIP from the <0>language repository</0> and",
           "placeFiles": "place the files from inside the zipped folder inside the <0>languages</0> folder.",
-          "readme": "Then, assuming you have NodeJS installed and the code files placed properly, you can follow the instructions on the <0>README</0> file from the repository. It will teach how to install the code's denpedencies, deploy the bot's slash commands and start listening for and responding them."
+          "readme": "Then, assuming you have NodeJS installed and the code files placed properly, you can follow the instructions on the <0>README</0> file from the repository. It will teach how to install the code's dependencies, deploy the bot's slash commands and start listening for and responding them."
         },
         "keepingBotOnline": {
           "title": "Keeping the bot online",
@@ -58,7 +58,7 @@
         },
         "thatsIt": {
           "title": "That's it!",
-          "description": "That's it for setting up the bot. I hope you have fun with it! I coded it in a way you can add more languages if you want to. So what are <0>you</0> gonna <1>build</1>?"
+          "description": "That's it for setting up the bot. I hope you have fun with it! I coded it in a way you can add more languages if you want to. So, what are <0>you</0> gonna <1>build</1>?"
         }
       }
     }

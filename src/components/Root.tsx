@@ -95,7 +95,7 @@ function Root() {
         px={0}
         pb={8}
       >
-        {i18n.language !== "en-US" && (
+        {i18n.language === "es-ES" && (
           <Text
             mx="auto"
             textAlign="center"
