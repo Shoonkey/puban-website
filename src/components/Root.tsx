@@ -42,7 +42,7 @@ function Root() {
             leftIcon={<ArrowLeft size={32} />}
             onClick={() => navigate(-1)}
           >
-            Go back
+            {t("goBackButton")}
           </Button>
         )}
         {!isSubapp && (

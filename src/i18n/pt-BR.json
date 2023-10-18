@@ -1,5 +1,6 @@
 {
   "appTitle": "Puban, uma cifra inventada",
+  "goBackButton": "Voltar",
   "pages": {
     "home": {
       "meta": {

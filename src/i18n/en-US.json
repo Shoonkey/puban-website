@@ -1,5 +1,6 @@
 {
   "appTitle": "Puban, a made-up cipher",
+  "goBackButton": "Go back",
   "pages": {
     "home": {
       "meta": {
