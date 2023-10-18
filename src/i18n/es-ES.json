@@ -11,7 +11,7 @@
     "setup-bot": {
       "meta": {
         "title": "Configurando el bot",
-        "description": "Configure el bot de Discord que encripta y decripta Puban"
+        "description": "Configure el bot de Discord que encripta y decripta Puban, una cifra inventada"
       }
     }
   }

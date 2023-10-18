@@ -10,7 +10,7 @@
     "setup-bot": {
       "meta": {
         "title": "Setting up the bot",
-        "description": "Set up the Discord bot that encrypts and decrypts Puban"
+        "description": "Set up the Discord bot that encrypts and decrypts Puban, a made-up cipher"
       }
     }
   }
