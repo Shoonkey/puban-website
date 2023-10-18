@@ -8,12 +8,60 @@
         "title": "Página principal",
         "description": "Puban es una cifra inventada que utiliza Ubbi Dubbi y PigLatin para encriptar mensajes"
       },
-      "pubanDescription": "Una cifra inventada que usa <0>Ubbi Dubbi</0> y <1>PigLatin</1>."
+      "pubanDescription": "Una cifra inventada que usa <0>Ubbi Dubbi</0> y <1>PigLatin</1>.",
+      "pageUse": "Tú puedes encriptar/decriptar de Puban y sus componentes aquí.",
+      "discordBot": "También hay un <0>bot de Discord</0> que tú mismo o misma puedes configurar!",
+      "input": {
+        "placeholder": "El texto a ser encriptado o decriptado va aquí"
+      },
+      "output": {
+        "placeholder": "El texto resultante va a aparecer aquí"
+      },
+      "copyButton": {
+        "action": "Copiar texto del resultado",
+        "done": "Resultado copiado"
+      },
+      "operation": {
+        "options": {
+          "encrypt": "Encriptar para",
+          "decrypt": "Decriptar de"
+        },
+        "button": "Vámonos!"
+      }
     },
     "setup-bot": {
       "meta": {
         "title": "Configurando el bot",
         "description": "Configure el bot de Discord que encripta y decripta Puban, una cifra inventada"
+      },
+      "botTitle": "Bot de Puban",
+      "botDescription": "Un bot de Discord que encripta y decripta de <0>Puban</0>.",
+      "pageUse": "El bot es <0>open source</0> y tú mismo puedes configurarlo!",
+      "instructions": {
+        "code": "El código está todo en Github, <0>aquí</0>.",
+        "thingsNeeded": {
+          "title": "O que vas a necesitar",
+          "items": {
+            "terminal": "Un terminal donde puedes ejecutar comandos (el prompt de comando de Windows, o un terminal UNIX).",
+            "nodejs": "NodeJS, para correr el código. <0>NodeJS</0> es una herramienta que permite correr JavaScript fuera del navegador.",
+            "git": "Git, idealmente, para fácilmente bajar el código. <0>Git</0> es una herramienta de gerencia de versión que también permite bajar e actualizar código eficientemente."
+          }
+        },
+        "gettingTheCode": {
+          "title": "Sacando el código",
+          "runGitCode": "Con el Git instalado, tú puedes bajar el código correndo",
+          "withoutGit": "Si tú elijires no bajar el Git, tú puedes bajar el ZIP del código en el sitio del repositorio. Como él usa un submódulo de otro repositorio, tú también va a necesitar bajar el ZIP del <0>repositorio de lenguajes</0> y",
+          "placeFiles": "poner los archivos de dentro de la carpeta zipada para dentro de la carpeta <0>languages</0>.",
+          "readme": "Entonces, suponiendo que usted tiene el NodeJS instalado y los archivos del código puestos correctamente, puede seguir las instrucciones del archivo <0>README</0> del repositorio. Él te va a enseñar como instalar las dependencias del código, poner en produción ços comandos de barra del bot y como empezar a oír y responderlos."
+        },
+        "keepingBotOnline": {
+          "title": "Mantenendo el bot online",
+          "description": "Despueś de seguir las instrucciones, siempre que su comando start esté correndo, su bot estará online! Para mantenerlo online continuamente, o processo deberá correr sin parar en algún lugar. Tú puedes elijir correrlo en cualquier servicio que prefieras, como en <0>AWS EC2</0>, por ejemplo. Ten en cuenta que tener un servidor generalmente implica en costos! Para el propósito de simplemente jugar con el bot, correrlo en tu máquina probablemente será suficiente."
+        },
+        "thatsIt": {
+          "title": "Eso es todo!",
+          "description": "Eso es todo para configurar el bot. Espero que te diviertas con él! Lo programé de manera que tú puedas agregar más lenguajes si quieres. Entonces, ¿qué vas <0>tú</0> a <1>construir</1>?"
+        }
       }
     }
   }
