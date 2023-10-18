@@ -95,18 +95,6 @@ function Root() {
         px={0}
         pb={8}
       >
-        {i18n.language === "es-ES" && (
-          <Text
-            mx="auto"
-            textAlign="center"
-            p={4}
-            borderRadius="8px"
-            bg="gray.700"
-            _light={{ bg: "gray.300" }}
-          >
-            {t("notAvailableYet")}
-          </Text>
-        )}
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/bot" element={<SetupBotPage />} />
