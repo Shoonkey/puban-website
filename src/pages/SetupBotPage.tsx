@@ -7,13 +7,15 @@ import {
   ListItem,
   Code,
 } from "@chakra-ui/react";
+import { Trans, useTranslation } from "react-i18next";
 
 import Page from "../components/Page";
-
 import FancyText from "../components/FancyText";
 import CustomLink from "../components/CustomLink";
 
-function Homepage() {
+function SetupBotPage() {
+  const { t } = useTranslation();
+
   return (
     <Page metaTitle="setup-bot" fontFamily="Gabarito">
       <Flex flexDir="column" alignItems="center">
@@ -23,7 +25,7 @@ function Homepage() {
           fontSize={{ base: "64px", md: "96px" }}
           whiteSpace="nowrap"
         >
-          Puban bot
+          {t("pages.setup-bot.botTitle")}
         </FancyText>
         <Heading
           as="h2"
@@ -32,11 +34,9 @@ function Homepage() {
           lineHeight="36px"
           letterSpacing="1px"
         >
-          A Discord bot that encrypts to and decrypts from{" "}
-          <FancyText as="span" whiteSpace="nowrap">
-            Puban
-          </FancyText>
-          .
+          <Trans i18nKey="pages.setup-bot.botDescription">
+            <FancyText as="span" whiteSpace="nowrap" />
+          </Trans>
         </Heading>
         <Heading
           as="h3"
@@ -46,21 +46,20 @@ function Homepage() {
           mt={4}
           color="gray.500"
         >
-          The bot is <FancyText as="span">open source</FancyText> and you can
-          set it up yourself!
+          <Trans i18nKey="pages.setup-bot.pageUse">
+            <FancyText as="span" />
+          </Trans>
         </Heading>
       </Flex>
       <Divider my={4} />
       <Flex flexDir="column" gap={4} fontSize="18px">
         <Text>
-          The code is all hosted on Github, over{" "}
-          <CustomLink to="https://github.com/shoonkey/puban-bot">
-            here
-          </CustomLink>
-          .
+          <Trans i18nKey="pages.setup-bot.instructions.code">
+            <CustomLink to="https://github.com/shoonkey/puban-bot" />
+          </Trans>
         </Text>
         <Heading as="h2" size="md">
-          What you'll need
+          {t("pages.setup-bot.instructions.needed.title")}
         </Heading>
         <UnorderedList>
           <ListItem>
@@ -80,10 +79,10 @@ function Homepage() {
           </ListItem>
         </UnorderedList>
         <Heading as="h2" size="md">
-          Getting the code
+          {t("pages.setup-bot.instructions.gettingTheCode.title")}
         </Heading>
         <Text>
-          With Git installed, you can get the code by running
+          {t("pages.setup-bot.instructions.gettingTheCode.runGitCode")}
           <Code
             display="block"
             whiteSpace="nowrap"
@@ -95,53 +94,40 @@ function Homepage() {
             git clone --recurse-submodules
             https://github.com/Shoonkey/puban-bot.git
           </Code>
-          If you choose to not install Git, you can download the ZIP for the
-          code in the repository website. As it uses a submodule from another
-          repository, you'll also need to download the ZIP from the{" "}
-          <CustomLink to="https://github.com/shoonkey/puban-languages">
-            language repository
-          </CustomLink>{" "}
-          and{" "}
+          <Trans i18nKey="pages.setup-bot.instructions.gettingTheCode.withoutGit">
+            <CustomLink to="https://github.com/shoonkey/puban-languages" />
+          </Trans>
           <Text as="i">
-            place the files from inside the zipped folder inside the{" "}
-            <Code display="inline-block">languages</Code> folder.
+            <Trans i18nKey="pages.setup-bot.instructions.gettingTheCode.placeFiles">
+              <Code display="inline-block" />
+            </Trans>
           </Text>
         </Text>
         <Text>
-          Then, assuming you have NodeJS installed and the code files placed
-          properly, you can follow the instructions on the{" "}
-          <CustomLink to="https://github.com/shoonkey/puban-bot#readme">
-            README
-          </CustomLink>{" "}
-          file from the repository. It will teach how to install the code's
-          denpedencies, deploy the bot's slash commands and start listening for
-          and responding them.
+          <Trans i18nKey="pages.setup-bot.instructions.gettingTheCode.readme">
+            <CustomLink to="https://github.com/shoonkey/puban-bot#readme" />
+          </Trans>
         </Text>
         <Heading as="h2" size="md">
-          Keeping the bot online
+          {t("pages.setup-bot.instructions.keepingBotOnline.title")}
         </Heading>
         <Text>
-          After you've followed the instructions, as long as your start command
-          is running, your bot will be online! To keep it online continuously,
-          the process will need to run nonstop somewhere. You can choose to
-          deploy on whatever service you prefer, like in{" "}
-          <CustomLink to="https://aws.amazon.com/ec2/">AWS EC2</CustomLink>, for
-          example. Bear in mind that having a server usually implies costs! For
-          the purpose of just playing around with the bot, running it on your
-          machine will probably be enough.
+          <Trans i18nKey="pages.setup-bot.instructions.keepingBotOnline.description">
+            <CustomLink to="https://aws.amazon.com/ec2/" />
+          </Trans>
         </Text>
         <Heading as="h2" size="md">
-          That's it!
+          {t("pages.setup-bot.instructions.thatsIt.title")}
         </Heading>
         <Text>
-          That's it for setting up the bot. I hope you have fun with it! I coded
-          it in a way you can add more languages if you want to. So what are{" "}
-          <FancyText as="span">you</FancyText> gonna{" "}
-          <FancyText as="span">build</FancyText>?
+          <Trans i18nKey="pages.setup-bot.instructions.thatsIt.description">
+            <FancyText as="span" />
+            <FancyText as="span" />
+          </Trans>
         </Text>
       </Flex>
     </Page>
   );
 }
 
-export default Homepage;
+export default SetupBotPage;

@@ -9,6 +9,7 @@ function setupI18N(lang: string) {
 
   instance.init({
     lng: lang,
+    fallbackLng: "en-US",
     resources: {
       "en-US": { translation: en },
       "pt-BR": { translation: pt },

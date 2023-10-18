@@ -2,26 +2,27 @@ import {
   Heading,
   Flex,
   Button,
-  Text,
   IconButton,
   Tooltip,
   useClipboard,
 } from "@chakra-ui/react";
 import { FormEventHandler, useState } from "react";
+import { Check, ClipboardText } from "@phosphor-icons/react";
+import { Trans, useTranslation } from "react-i18next";
 
 import Page from "../components/Page";
 
 import FancyText from "../components/FancyText";
 import TranslateArea from "../components/TranslateArea";
 import CustomSelect from "../components/CustomSelect";
-import { Link } from "react-router-dom";
-import { Check, ClipboardText } from "@phosphor-icons/react";
 import CustomLink from "../components/CustomLink";
 
 type Operation = "encrypt" | "decrypt";
 type Language = "puban" | "ubbi-dubbi" | "pig-latin";
 
 function Homepage() {
+  const { t } = useTranslation();
+
   const [operation, setOperation] = useState<Operation>("encrypt");
   const [language, setLanguage] = useState<Language>("puban");
 
@@ -56,15 +57,10 @@ function Homepage() {
           lineHeight="36px"
           letterSpacing="1px"
         >
-          A made-up cipher that uses{" "}
-          <FancyText as="span" whiteSpace="nowrap">
-            Ubbi Dubbi
-          </FancyText>{" "}
-          and{" "}
-          <FancyText as="span" whiteSpace="nowrap">
-            PigLatin
-          </FancyText>
-          .
+          <Trans i18nKey="pages.home.pubanDescription">
+            <FancyText as="span" whiteSpace="nowrap" />
+            <FancyText as="span" whiteSpace="nowrap" />
+          </Trans>
         </Heading>
         <Heading
           as="h3"
@@ -74,7 +70,7 @@ function Homepage() {
           mt={4}
           color="gray.500"
         >
-          You can encrypt/decrypt from Puban and its components here.
+          {t("pages.home.pageUse")}
         </Heading>
         <Heading
           as="h3"
@@ -83,8 +79,9 @@ function Homepage() {
           textAlign="center"
           color="gray.500"
         >
-          There's also a <CustomLink to="/bot">Discord bot</CustomLink> you can
-          set up!
+          <Trans i18nKey="pages.home.discordBot">
+            <CustomLink to="/bot" />
+          </Trans>
         </Heading>
       </Flex>
       <Flex
@@ -98,7 +95,7 @@ function Homepage() {
       >
         <TranslateArea
           mode="input"
-          placeholder="Text to be encrypted or decrypted goes here"
+          placeholder={t("pages.home.input.placeholder")}
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
@@ -109,8 +106,12 @@ function Homepage() {
               value={operation}
               onChange={(e) => setOperation(e.target.value as Operation)}
             >
-              <option value="encrypt">Encrypt to</option>
-              <option value="decrypt">Decrypt from</option>
+              <option value="encrypt">
+                {t("pages.home.operation.options.encrypt")}
+              </option>
+              <option value="decrypt">
+                {t("pages.home.operation.options.decrypt")}
+              </option>
             </CustomSelect>
             <CustomSelect
               w="auto"
@@ -123,12 +124,16 @@ function Homepage() {
             </CustomSelect>
           </Flex>
           <Button type="submit" colorScheme="blue">
-            Go
+            {t("pages.home.operation.button")}
           </Button>
         </Flex>
         <Flex position="relative">
           <Tooltip
-            label={hasCopiedResult ? "Result copied" : "Copy result text"}
+            label={t(
+              `pages.home.copyButton.${
+                hasCopiedResult ? "done" : "action"
+              }`
+            )}
             placement="left"
             px={3}
             py={2}
@@ -150,14 +155,16 @@ function Homepage() {
                 )
               }
               onClick={handleCopyResult}
-              aria-label={
-                hasCopiedResult ? "Result copied" : "Copy result text"
-              }
+              aria-label={t(
+                `pages.home.copyButton.${
+                  hasCopiedResult ? "done" : "action"
+                }`
+              )}
             />
           </Tooltip>
           <TranslateArea
             mode="output"
-            placeholder="Resulting text will show here"
+            placeholder={t("pages.home.output.placeholder")}
             value={resultText}
           />
         </Flex>
