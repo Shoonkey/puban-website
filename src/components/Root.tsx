@@ -6,8 +6,8 @@ import {
   Select,
   Tooltip,
   VisuallyHidden,
-  Text,
   useColorModeValue,
+  useColorMode,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { SunHorizon, MoonStars, ArrowLeft } from "@phosphor-icons/react";
@@ -21,7 +21,8 @@ import "@fontsource/gabarito";
 
 function Root() {
   const { t, i18n } = useTranslation();
-  const { isSubapp, theme, setTheme } = useAppSettings();
+  const { isSubapp } = useAppSettings();
+  const { colorMode: theme, setColorMode: setTheme } = useColorMode();
 
   const navigate = useNavigate();
   const location = useLocation();
